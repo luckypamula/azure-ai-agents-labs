@@ -1,6 +1,9 @@
 # Ignore Python virtual environment
 .venv/
 __pycache__/
+venv/
+labs/output/
+labs/uploads/
 
 # Ignore .env file
 .env
