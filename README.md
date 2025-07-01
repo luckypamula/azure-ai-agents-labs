@@ -1,34 +1,70 @@
-# Hands-On Labs for AI Agents Using Azure AI Agent Service SDK and Semantic Kernel
+# Hands-On Labs for AI Agents Using Azure AI Agent Service UI and SDK
 
-This repo contains hands-on labs for building AI Agents using the Azure AI Agent Service SDK and Semantic Kernel. The Azure AI Agent Service is used to create AI agents and Semantic Kernel is used to orchestrate the agents in a multi-agent system. 
+This repository provides a series of hands-on labs for building and orchestrating AI Agents using the Azure AI Agent Service SDK. You will learn to set up your Azure environment, deploy models, create and connect agents, and build advanced multi-agent systems.
 
 ## Prerequisites
-**Microsoft will provide the lab environment with all the prerequisites**
-* Azure subscription
-* Azure AI Foundry resource with an AI Hub and AI Project (You will set this up in Lab 1)
-* Visual Studio Code
-* Python 3.10>
-* Azure CLI
-* Azure CLI Azure ML extension
 
-## Labs
+Below is a list of prequisites that are required in order to run the labs. Please read through carefully to ensure these or met to avoid errors when running the labs.
 
-### Lab 1 - Setup and test the lab environment
-Lab 1 walks you through how to setup the necessary lab environment for building AI Agents. This includes:
-* Setting up the AI Project in the Azure AI Foundry
-* Deploying an LLM and embedding models
-* Establish connectivity from VS Code to the AI Project
-* Perform a simple Chat Completion call to the LLM to test that your lab environment is set up properly. 
+### 1. Azure subscription
+- You must have an active Azure subscription and be able to log into the Azure Portal to use Azure services in these labs. Don't have a subscription? Most of the content in these labs provide thorough walkthroughs and explanations of the code and output, so whether or not you are actually able to run the labs, you can still learn a lot by reading through them!
 
-### Lab 2 - Build a simple AI agent
-Lab 2 introduces you to AI agents in Azure. You will learn how to build a simple AI agent that generates a bar chart comparing costs between health insurance plans.
+### 2. Install Visual Studio Code (required if running locally)
+- Download and install VS Code from: https://code.visualstudio.com/
 
-### Lab 3 - Build a RAG Agent
-In Lab 3, you will be building an AI Agent that will perform Retrieval Augmented Generaton (RAG) on health plan documents. Azure AI Search will be used as the vector database for storing the embeddings for the health plan documents.
+### 3. Install Python (required if running locally)
+- Download and install Python (version 3.10 or higher) from: https://www.python.org/downloads/
+- During installation, check the box to "Add Python to PATH".
 
-### Lab 4 - Develop a multi-agent system
-In Lab 4, you will be creating a multi-agent system consisting of 4 agents working together to generate reports about health plan documents. You will build these 4 AI Agents:
-1. Search Agent - This agent will search an Azure AI Search index for information about specific health plan policies.
-2. Report Agent - This agent will generate a detailed report about the health plan policy based on the information returned from the Search Agent.
-3. Validation Agent - This agent will validate that the generated report meets specified requirements. In our case, making sure that the report contains information about coverage exclusions.
-4. Orchestrator Agent - This agent will act as an orchestrator that manages the communication between the Search Agent, Report Agent, and Validation Agent.
+### 4. Install the Azure CLI (required if running locally)
+- Download and install the Azure CLI from: https://learn.microsoft.com/cli/azure/install-azure-cli
+- After installation, open a new terminal and run `az --version` to verify installation.
+
+### 5. Install Git (required if running locally)
+- Download and install Git from: https://git-scm.com/downloads
+- Follow the installation instructions for your operating system (Windows, macOS, or Linux).
+- After installation, open a new terminal or command prompt and run `git --version` to verify Git is installed correctly.
+
+### 6. Install the Azure CLI Tools Extension in VS Code (required if running locally)
+- In VS Code, go to Extensions (Ctrl+Shift+X).
+- Search for and install: **Azure CLI Tools** (`ms-vscode.azurecli`).
+
+### 7. Install the Azure Resource Extension in VS Code (recommended if running locally)
+- In VS Code, go to Extensions.
+- Search for and install: **Azure Account** (`ms-vscode.azure-account`).
+
+### 8. Create a Github account (required if running in Github Codespaces)
+- This is only required if you wish to run the labs in Github Codespaces.
+- Note: your organization may have certain security policies in place that prevent running Labs in the cloud. In that case, please proceed with option #1
+
+## How to Get Started
+
+If you are running the labs locally...
+
+1. Clone the repo by copying the URL 
+
+2. Open VS Code. On the main page, select 'Clone git repository' and paste the URL you just copied into the top window. It will ask you where you want to save the folder, that is up to you.
+
+If you are running the labs in Github Codespaces...
+
+1. Select Codespaces and create a new workspace. That's it!
+
+
+## Labs Overview
+
+- **Lab 1: Environment Setup and Testing**  
+  Set up your Azure AI Foundry project, deploy LLM and embedding models, connect from VS Code, and verify your environment with a test chat completion.
+
+- **Lab 2: Create an AI Agent in Azure AI Foundry UI**  
+  Use the low-code UI to build an AI agent that extracts answers from Excel files and retrieves real-time information from Bing Search.
+
+- **Lab 3: Build a Simple AI Agent**  
+  Develop a Python-based AI agent in Azure that generates a bar chart comparing health insurance plan costs.
+
+- **Lab 4: Build a Retrieval Augmented Generation (RAG) Agent**  
+  Create an AI agent that performs RAG on health plan documents using Azure AI Search as a vector database for embeddings.
+
+- **Lab 5: Develop a Multi-Agent System**  
+  Build a system of four collaborating agents: a Search Agent (queries Azure AI Search), a Report Agent (generates detailed reports), a Validation Agent (checks report requirements), and an Orchestrator Agent (manages agent interactions).
+
+Each lab is designed to be practical and builds on the previous, giving you hands-on experience with Azure AI services, agent orchestration, and real-world AI solutions.
