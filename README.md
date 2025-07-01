@@ -43,12 +43,17 @@ If you are running the labs locally...
 
 1. Clone the repo by copying the URL 
 
+   ![Clone Repo](images/clone-repo.jpg)
+
 2. Open VS Code. On the main page, select 'Clone git repository' and paste the URL you just copied into the top window. It will ask you where you want to save the folder, that is up to you.
+
+   ![Clone Repo](images/vs-code-clone.jpg)
 
 If you are running the labs in Github Codespaces...
 
 1. Select Codespaces and create a new workspace. That's it!
 
+   ![Clone Repo](images/codespaces.jpg)
 
 ## Labs Overview
 
